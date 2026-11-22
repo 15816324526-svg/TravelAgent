@@ -1,0 +1,23 @@
+1.cd backend
+
+2.uv init --bare --python 3.12
+  得到pyproject.toml
+  它会初始化最小 Python 项目，主要创建 pyproject.toml，
+  不会替你生成一堆示例业务代码。
+  `--bare` 就是最小初始化模式
+
+3.uv add pydantic
+  将 Pydantic 写入 pyproject.toml；
+  创建 .venv；
+  创建依赖锁文件 uv.lock；
+  必要时下载 Python 3.12；
+  把 Pydantic 安装到这个项目的隔离环境中。
+
+4.uv run python -c "import pydantic; print(pydantic.__version__)"
+  如果成功，它会输出一个 Pydantic 版本号。
+
+这些命令会联网下载 Python和依赖，并在 backend/ 创建环境及配置文件
+
+Python       运行代码
+Pydantic     Python 中负责数据验证的第三方库
+uv           安装 Python、创建虚拟环境、管理第三方库的工具

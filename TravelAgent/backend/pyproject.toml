@@ -1,0 +1,11 @@
+[project]
+name = "backend"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.163.1",#编写应用对象和路由
+    "pydantic>=2.14.3",
+    "uvicorn[standard]>=0.54.0",#启动 ASGI 服务器并监听 HTTP 请求。
+    # FastAPI 模块依赖下载：uv add fastapi "uvicorn[standard]"
+]
+

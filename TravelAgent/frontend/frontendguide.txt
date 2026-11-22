@@ -1,0 +1,69 @@
+frontend/
+├─ public/
+├─ src/
+│  ├─ api/
+│  │  └─ trip.ts
+│  │
+│  ├─ assets/
+│  │  └─ images/
+│  │     └─ hangzhou-cover.*
+│  │
+│  ├─ components/
+│  │  ├─ planner/
+│  │  │  ├─ PlanStepHeader.vue
+│  │  │  ├─ TravelPreferenceForm.vue
+│  │  │  ├─ DateRangePanel.vue
+│  │  │  ├─ PlanningProgressPanel.vue
+│  │  │  ├─ PlanningDonePanel.vue
+│  │  │  └─ TripPreviewCard.vue
+│  │  │
+│  │  └─ itinerary/
+│  │     ├─ TripSummaryCard.vue
+│  │     ├─ DayItineraryCard.vue
+│  │     ├─ RouteMapPanel.vue
+│  │     ├─ HotelRecommendationCard.vue
+│  │     └─ BudgetSummaryCard.vue
+│  │
+│  ├─ composables/
+│  │  └─ useTripPlanning.ts
+│  │
+│  ├─ router/
+│  │  └─ index.ts
+│  │
+│  ├─ styles/
+│  │  ├─ tokens.css
+│  │  └─ base.css
+│  │
+│  ├─ types/
+│  │  └─ trip.ts
+│  │
+│  ├─ views/
+│  │  ├─ PlannerView.vue
+│  │  └─ TripResultView.vue
+│  │
+│  ├─ App.vue
+│  └─ main.ts
+│
+├─ index.html
+├─ package.json
+├─ tsconfig.json
+└─ vite.config.ts
+
+npm run dev
+→ Vite 启动
+→ 浏览器读取 index.html
+→ index.html 加载 main.ts
+→ main.ts 创建 Vue 应用
+→ App.vue 挂载到 <div id="app">
+
+    /*form 表示一组需要用户填写并最终提交的数据*/
+    /*div 是一个通用分组容器*/
+    /*label 表示输入框的文字说明*/
+    /*label for == input id 因为for要寻找id*/
+
+完成标准：
+1. 初始化 Vue 3 + TypeScript 基础项目。
+2. 只建立 router/、views/、components/planner/、styles/。
+3. 建立 PlannerView.vue 和 TripResultView.vue 两个空页面。
+4. 配好两个临时路由并能在浏览器中分别访问。
+5. 暂时不写表单、不接后端、不制作地图。
